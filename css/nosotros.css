@@ -1,0 +1,274 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
+
+/* Variables de colores */
+:root {
+  --azul: #00CEE3;
+  --gris-oscuro: #4F5966;
+  --blanco: #FFFFFF;
+  --negro: #111111;
+}
+
+
+/* Pagina nosotros */
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+}
+
+
+header {
+  background-color: #FFFFFF;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--gris-oscuro);
+    padding: 10px 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--blanco);
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  nav a:hover {
+    color: var(--azul);
+}
+.phrase {
+    font-style: italic;
+    text-align: center;
+    font-size: 20px;
+    color: var(--negro);
+    margin: 20px auto;
+    max-width: 60%;
+    
+  }
+/* pagina nosotros */
+.container {
+    max-width: 1800px; /* Limita el ancho del contenido */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 50px; /* Espaciado interno */}
+  
+    section h1 {
+      font-size: 2.5rem;
+      font-weight: 700; /* Negrita */
+      text-align: center; /* Centra el título */
+      margin-bottom: 20px; /* Espacio debajo del título */
+      color: #222; /* Color más oscuro para resaltar */
+    }
+    
+    section p {
+      font-size: 1.1rem;
+      font-weight: 400; /* Peso regular */
+      text-align: justify; /* Alineación justificada */
+      margin-bottom: 20px; /* Espacio entre párrafos */
+      color: #555; /* Color ligeramente más claro */
+    }
+    
+    section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    section ul {
+      padding-left: 20px; /* Indenta la lista */
+    }
+    
+    section ul li {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    
+   /* Sección del equipo */
+  .team-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap; /* Ajuste responsivo */
+    margin: 40px 0;
+  }
+  
+  .team-member {
+    flex: 1;
+    min-width: 280px; /* Ancho mínimo para mantener proporciones en pantallas pequeñas */
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 150px; /* Tamaño uniforme para todas las fotos */
+    height: 150px;
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+    border-radius: 50%; /* Hace las imágenes redondas */
+    margin-bottom: 20px;
+  }
+  
+  .team-member h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .team-member p {
+    font-size: 1rem;
+    text-align: justify; /* Justifica los textos */
+    margin-bottom: 20px;
+  }
+  
+  .team-member strong {
+    font-weight: 600;
+    color: #555;
+  }
+/* Misión y Visión */
+
+.visionmision {
+    display: flex;
+    justify-content: space-between; /* Asegura que las imágenes queden en extremos opuestos */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 20px; /* Aumenta el espacio entre las columnas */
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  
+  .vision-mision div {
+    display: flex;
+    flex-direction: column; /* Organiza imagen y texto verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido */
+    justify-content: center; /* Centra verticalmente el contenido */
+    text-align: center; /* Centra el texto */
+    max-width: 45%; /* Limita el ancho de cada columna para mayor balance */
+  }
+  
+  .vision-mision img {
+    width: 100%; /* Garantiza que las imágenes ocupen todo el ancho disponible */
+    height: auto;
+    margin-bottom: 10px; /* Agrega espacio entre la imagen y el texto */
+  }
+  
+  .vision-mision h2,
+  .vision-mision p {
+    margin: 10px 0; /* Asegura un espaciado uniforme en los textos */
+  }
+/* pie */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+  }
+  
+  footer a.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+  }
+/* Adaptaciones para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    nav a {
+      display: block;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+  
+    .phrase {
+      font-size: 16px;
+      max-width: 90%;
+    }
+  
+    .container {
+      padding: 20px;
+    }
+  
+    section h1 {
+      font-size: 2rem;
+    }
+  
+    section p {
+      font-size: 1rem;
+    }
+  
+    /* Ajustes en equipo */
+    .team-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .team-member {
+      max-width: 100%;
+    }
+  
+    /* Ajustes en misión y visión */
+    .visionmision {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    .vision-mision div {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .vision-mision img {
+      max-width: 80%;
+    }
+  
+    footer a.whatsapp {
+      bottom: 10px;
+      right: 10px;
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .phrase {
+      font-size: 14px;
+      max-width: 95%;
+    }
+  
+    section h1 {
+      font-size: 1.8rem;
+    }
+  
+    section p {
+      font-size: 0.9rem;
+    }
+  
+    .team-member img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .vision-mision img {
+      max-width: 90%;
+    }
+  }
