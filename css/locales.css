@@ -1,7 +1,6 @@
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
 
-
 /* Variables de colores */
 :root {
   --azul: #00CEE3;
@@ -10,219 +9,178 @@
   --negro: #111111;
 }
 
-
-/* Pagina locales */
-
-
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #FFFFFF;
-}
-
-
-header {
-  background-color: #FFFFFF;
-  color: white;
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--blanco);
+  color: var(--negro);
   text-align: center;
-  padding: 1rem;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    background-color: var(--gris-oscuro);
-    padding: 10px 0;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: var(--blanco);
-    margin: 0 15px;
-    font-size: 18px;
-    font-weight: 600;
-  }
-  
-  nav a:hover {
-    color: var(--azul);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--gris-oscuro);
+  padding: 10px 0;
 }
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  margin: 10px 15px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: var(--azul);
+}
+
 .phrase {
-    font-style: italic;
-    text-align: center;
-    font-size: 20px;
-    color: var(--negro);
-    margin: 20px auto;
-    max-width: 60%;
-    
-  }
+  font-style: italic;
+  text-align: center;
+  font-size: 20px;
+  margin: 20px auto;
+  max-width: 90%;
+}
 
-/* Estilo servicios para locales */
-.cajalocales {
-    display: flex;
-    justify-content: space-between; /* Asegura que las imágenes queden en extremos opuestos */
-    align-items: center; /* Centra verticalmente los elementos */
-    gap: 20px; /* Aumenta el espacio entre las columnas */
-    margin: 0 auto;
-    max-width: 90%;
-  }
+.cajalocales,
+.otros-servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: auto;
+  gap: 20px;
+}
 
-  section ul {
-    padding-left: 20px; /* Indenta la lista */
-  }
-  
-  section ul li {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
-/* Estilo del formulario de contacto */
+.imgservicio {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.textoservicio {
+  text-align: center;
+}
+
+.textoservicio h2 {
+  font-size: 1.8rem;
+  color: var(--gris-oscuro);
+  margin-bottom: 10px;
+}
+
+.textoservicio p,
+.textoservicio ul {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.textoservicio ul {
+  padding-left: 20px;
+}
+
+.banner-ebook img {
+  width: 100%;
+  margin: 30px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .contact-form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-form h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
-  }
-  
-  .contact-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #555;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: 'Manrope', sans-serif;
-    box-sizing: border-box;
-  }
-  
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    outline: none;
-    border-color: #4caf50;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
-  }
-  
-  .contact-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .contact-form button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Responsividad */
-  @media (max-width: 768px) {
-    .contact-form {
-      padding: 15px;
-    }
-  }
-/* pie */
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Manrope', sans-serif;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--azul);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #00b5cc;
+}
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--gris-oscuro);
-    color: var(--blanco);
-  }
-  
-  footer a.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--gris-oscuro);
-    color: var(--blanco);
-    padding: 10px 15px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 18px;
-  }
-/* Adaptación a dispositivos móviles */
+  text-align: center;
+  padding: 20px;
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+}
+
+footer a.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
 @media (max-width: 768px) {
-  /* Ajuste del header */
-  header {
-    padding: 0.5rem;
-  }
-
-  /* Ajuste del menú de navegación */
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
-    font-size: 16px;
-  }
-
-  /* Frase destacada */
-  .phrase {
-    font-size: 18px;
-    max-width: 80%;
-  }
-
-  /* Sección de servicios para locales */
-  .cajalocales {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 15px;
-  }
-
-  section ul {
-    padding-left: 10px;
-  }
-
-  /* Formulario de contacto */
-  .contact-form {
-    max-width: 90%;
-    padding: 15px;
-  }
-
-  .contact-form h2 {
+  .textoservicio h2 {
     font-size: 1.5rem;
   }
 
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.9rem;
+  .textoservicio p,
+  .textoservicio ul {
+    font-size: 0.95rem;
   }
 
-  /* Pie de página */
-  footer {
+  nav a {
+    font-size: 14px;
+    margin: 5px 10px;
+  }
+
+  .contact-form {
     padding: 15px;
   }
 
-  footer a.whatsapp {
-    width: 50px;
-    height: 50px;
-    font-size: 16px;
-    padding: 12px;
+  .banner-ebook img {
+    margin: 20px 0;
   }
-}  
+}
+ 
