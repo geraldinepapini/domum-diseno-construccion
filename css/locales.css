@@ -17,25 +17,60 @@ body {
   text-align: center;
 }
 
-nav {
+/* Estilo para el header */
+.main-header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: var(--gris-oscuro);
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  background-color: white;
+}
+
+/* Logo adaptativo */
+.logo-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo-img {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navegación */
+.main-nav {
+  background-color: #3d4451;
+  width: 100%;
+  text-align: center;
   padding: 10px 0;
 }
 
-nav a {
-  color: var(--blanco);
+.main-nav a {
+  color: white;
+  margin: 0 15px;
   text-decoration: none;
-  margin: 10px 15px;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Manrope', sans-serif;
 }
 
-nav a:hover {
-  color: var(--azul);
+.main-nav a:hover {
+  color: #00cfe8;
 }
+
+/* Responsive para celular */
+@media screen and (max-width: 768px) {
+  .logo-img {
+    width: 120px;
+  }
+
+  .main-nav a {
+    display: inline-block;
+    margin: 10px 8px;
+    font-size: 14px;
+  }
+}
+
 
 .phrase {
   font-style: italic;
