@@ -146,31 +146,6 @@ section h2 {
   margin-left: 6px;
 }
 
-/* Banner Ebook */
-.banner-ebook {
-  text-align: center;
-  background-color: #e0f7fa;
-  padding: 30px 20px;
-  margin: 60px auto;
-  border-radius: 10px;
-  max-width: 900px;
-}
-.banner-ebook h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.banner-ebook a {
-  background-color: #00CEE3;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: 600;
-}
-.banner-ebook a:hover {
-  background-color: #00b5cc;
-}
-
 /* Misión y Visión */
 .vision-mision {
   display: flex;

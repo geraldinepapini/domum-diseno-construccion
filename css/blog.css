@@ -1,14 +1,32 @@
-/* General */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* blog.css - estilos para el blog de Domum Diseño */
 
 body {
-  font-family: 'Manrope', sans-serif;
-  background-color: #f7f7f7;
-  color: #222;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background-color: #fafafa;
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
+/* Reset general */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Redes sociales arriba */
+.redes-superiores {
+  background-color: #ffffff;
+  padding: 8px 12px;
+  text-align: right;
+}
+.redes-superiores a {
+  margin-left: 10px;
+  display: inline-block;
 }
 
 /* Estilo para el header */
@@ -65,67 +83,146 @@ body {
   }
 }
 
-/* Blog Section */
-.blog-section {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
+.hero-blog {
+  background-color: #e9f9fb;
   text-align: center;
+  padding: 3rem 1rem;
 }
 
-.blog-section h1 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #333;
+.hero-blog h1 {
+  color: #00b5c7;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
 }
 
-iframe {
+.hero-blog p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.post-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card img {
   width: 100%;
-  height: 90vh;
-  border: none;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
+  display: block;
+}
+
+.post-card h2 {
+  font-size: 1.3rem;
+  margin: 1rem;
+  color: #222;
+}
+
+.post-card p {
+  margin: 0 1rem 1rem 1rem;
+  color: #555;
+}
+
+.post-card .leer-mas {
+  display: inline-block;
+  margin: 0 1rem 1.2rem 1rem;
+  background-color: #00b5c7;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post-card .leer-mas:hover {
+  background-color: #0094a3;
+}
+
+.articulo-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.articulo h1 {
+  font-size: 2rem;
+  color: #00b5c7;
+}
+
+.articulo .fecha {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.articulo img {
+  max-width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+}
+
+.articulo h2 {
+  color: #333;
+  margin-top: 2rem;
+}
+
+.articulo ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+
+.articulo li {
+  margin-bottom: 0.5rem;
+}
+
+.volver-blog {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #00b5c7;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Footer */
 footer {
-  background-color: #f0f0f0;
   text-align: center;
-  padding: 30px 20px;
-  margin-top: 40px;
-  font-size: 14px;
+  padding: 2rem 1rem;
+  background-color: #f4f4f4;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #666;
 }
 
-footer p {
-  margin-bottom: 10px;
+footer .social-icons {
+  margin: 1rem 0;
 }
 
-.social-icons {
-  margin-top: 10px;
+footer .social-icons a {
+  display: inline-block;
+  margin: 0 0.5rem;
 }
 
-.social-icons a img {
-  width: 35px;
-  margin: 5px;
+footer .social-icons a img {
+  width: 24px; /* tamaño ajustado para que no se vean enormes */
+  height: 24px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 8px 0;
-    font-size: 18px;
-  }
-
-  .blog-section h1 {
-    font-size: 22px;
-  }
-
-  iframe {
-    height: 70vh;
-  }
-
-  header img {
-    max-width: 140px;
-  }
+footer .social-icons a img:hover {
+  transform: scale(1.1);
 }
