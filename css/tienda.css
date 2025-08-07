@@ -75,6 +75,8 @@ body {
 }
 /* tienda.css - estilos específicos para la tienda */
 
+/* tienda.css - estilos específicos para tienda */
+
 .hero-tienda {
   background-color: #f5f5f5;
   padding: 4rem 2rem;
@@ -140,7 +142,7 @@ body {
 
 .boton-comprar {
   display: inline-block;
-  background-color: #6a4c93; /* color principal */
+  background-color: #00cee3;
   color: #fff;
   text-decoration: none;
   padding: 0.6rem 1.2rem;
@@ -152,6 +154,13 @@ body {
 .boton-comprar:hover {
   background-color: #56397b;
 }
+
+.boton-comprar.disabled {
+  background-color: #ccc;
+  pointer-events: none;
+  cursor: default;
+}
+
 
 /* Secciones */
 section:not(.hero) {
