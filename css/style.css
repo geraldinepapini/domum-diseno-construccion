@@ -5,13 +5,13 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #F4F1EE; /* beige cálido, más calma */
+  color: #2E3A45; /* gris azulado profundo */
 }
 
 /* Redes sociales arriba */
 .redes-superiores {
-  background-color: #ffffff;
+  background-color: #FAFAF8; /* blanco roto suave */
   padding: 8px 12px;
   text-align: right;
 }
@@ -20,16 +20,16 @@ body {
   display: inline-block;
 }
 
-/* Estilo para el header */
+/* Header */
 .main-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px 0;
-  background-color: white;
+  background-color: #FAFAF8;
 }
 
-/* Logo adaptativo */
+/* Logo */
 .logo-container {
   text-align: center;
   margin-bottom: 10px;
@@ -43,14 +43,14 @@ body {
 
 /* Navegación */
 .main-nav {
-  background-color: #3d4451;
+  background-color: #324049; /* gris suave mejorado */
   width: 100%;
   text-align: center;
   padding: 10px 0;
 }
 
 .main-nav a {
-  color: white;
+  color: #FAFAF8;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -58,15 +58,14 @@ body {
 }
 
 .main-nav a:hover {
-  color: #00cfe8;
+  color: #00CFE8;
 }
 
-/* Responsive para celular */
+/* Responsive */
 @media screen and (max-width: 768px) {
   .logo-img {
     width: 120px;
   }
-
   .main-nav a {
     display: inline-block;
     margin: 10px 8px;
@@ -74,30 +73,9 @@ body {
   }
 }
 
-
-/* Imagen principal */
-.hero-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-/* Secciones */
-section:not(.hero) {
-  margin: 60px auto;
-  padding: 0 20px;
-  max-width: 1000px;
-}
-section h2 {
-  text-align: center;
-  font-size: 28px;
-  font-family: 'Manrope', sans-serif;
-  margin-bottom: 30px;
-  color: #222;
-}
+/* HERO */
 .hero {
+  position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -106,11 +84,38 @@ section h2 {
 
 .hero-img {
   width: 100%;
-  height: 450px; /* Ajustás este número a tu gusto */
+  height: 450px;
   object-fit: cover;
   display: block;
 }
 
+/* Overlay aclarador hero */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.18); /* capa suave para dar claridad */
+  pointer-events: none;
+}
+
+/* Secciones */
+section:not(.hero) {
+  margin: 60px auto;
+  padding: 0 20px;
+  max-width: 1000px;
+  border-top: 1px solid #D7DDE1; /* línea divisoria sutil para estructura */
+}
+
+section h2 {
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Manrope', sans-serif;
+  margin-bottom: 30px;
+  color: #2E3A45;
+}
 
 /* Servicios */
 .servicios {
@@ -119,9 +124,11 @@ section h2 {
   gap: 50px;
   align-items: center;
 }
+
 .servicio {
   text-align: center;
 }
+
 .servicio img {
   width: 100%;
   max-width: 700px;
@@ -129,19 +136,23 @@ section h2 {
   border-radius: 8px;
   margin-bottom: 15px;
 }
+
+/* Botón menos vibrante */
 .servicio .btn-vermas {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #00CEE3;
+  background-color: #00BFD5; /* turquesa calmado */
   color: white;
   text-decoration: none;
   border-radius: 25px;
   transition: background 0.3s ease;
 }
+
 .servicio .btn-vermas:hover {
-  background-color: #00b5cc;
+  background-color: #00AAC0; /* hover más suave */
 }
+
 .btn-vermas i {
   margin-left: 6px;
 }
@@ -153,10 +164,12 @@ section h2 {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .vision-mision .card {
   flex: 1 1 400px;
   text-align: center;
 }
+
 .responsive-img {
   width: 100%;
   max-width: 700px;
@@ -164,9 +177,10 @@ section h2 {
   border-radius: 10px;
   margin-bottom: 15px;
 }
+
 .vision-mision p {
   font-size: 16px;
-  color: #444;
+  color: #4F5966;
   padding: 0 10px;
 }
 
@@ -177,71 +191,81 @@ section h2 {
   padding: 0 20px;
   text-align: center;
 }
+
 .nuestro-equipo h2 {
   font-size: 26px;
-  color: #222;
+  color: #2E3A45;
   margin-bottom: 40px;
 }
+
 .equipo {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
 }
+
 .equipo .miembro {
   flex: 1 1 300px;
   max-width: 300px;
-  background-color: #ffffff;
+  background-color: #FAFAF8;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
   text-align: center;
 }
+
 .equipo .miembro img {
   width: 140px;
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 15px;
-  border: 4px solid #00CEE3;
+  border: 4px solid #00CFE8;
 }
+
 .equipo .miembro h3 {
   font-size: 18px;
   font-family: 'Manrope', sans-serif;
-  color: #111;
+  color: #2E3A45;
   margin-bottom: 8px;
 }
+
 .equipo .miembro p {
   font-size: 15px;
-  color: #666;
+  color: #4F5966;
   line-height: 1.4;
 }
 
-/* Formulario de contacto */
+/* Formulario contacto */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
-  background: #ffffff;
+  background: #FAFAF8;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .contact-form h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #2E3A45;
 }
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #D7DDE1;
   border-radius: 8px;
   font-size: 16px;
+  background-color: #FAFAF8;
 }
+
 .contact-form button {
-  background-color: #00CEE3;
+  background-color: #00BFD5;
   color: white;
   font-size: 16px;
   border: none;
@@ -250,21 +274,24 @@ section h2 {
   border-radius: 8px;
   cursor: pointer;
 }
+
 .contact-form button:hover {
-  background-color: #00b5cc;
+  background-color: #00AAC0;
 }
 
 /* Footer */
 footer {
-  background-color: #4f5966;
-  color: white;
+  background-color: #324049;
+  color: #FAFAF8;
   text-align: center;
   padding: 20px 10px;
   margin-top: 50px;
 }
+
 footer p {
   margin: 5px 0;
 }
+
 footer a {
   margin: 0 8px;
   display: inline-block;
