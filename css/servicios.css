@@ -125,54 +125,166 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.contact-form {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* PAGINA SERVICIOS */
+
+.servicios-page{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
 }
 
-.contact-form h2 {
-  text-align: center;
-  color: #333;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+.titulo-servicios{
+text-align:center;
+font-size:36px;
+margin-bottom:10px;
+color:var(--gris-oscuro);
 }
 
-.contact-form label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 5px;
+.intro-servicios{
+text-align:center;
+max-width:700px;
+margin:0 auto 60px auto;
+color:#555;
+font-size:18px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-family: 'Manrope', sans-serif;
-  box-sizing: border-box;
+/* CARD SERVICIO */
+
+.servicio-card{
+display:flex;
+gap:40px;
+margin-bottom:70px;
+align-items:center;
 }
 
-.contact-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: var(--azul);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
+.servicio-card img{
+width:45%;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
-.contact-form button:hover {
-  background-color: #00b5cc;
+.servicio-info{
+flex:1;
 }
+
+.servicio-info h2{
+color:var(--gris-oscuro);
+margin-bottom:10px;
+}
+
+.servicio-descripcion{
+font-size:17px;
+margin-bottom:15px;
+color:#444;
+}
+
+.servicio-info ul{
+margin-bottom:15px;
+}
+
+.servicio-info li{
+margin-bottom:6px;
+}
+
+.servicio-info ul{
+list-style:none;
+padding:0;
+margin-bottom:20px;
+}
+
+.servicio-info li{
+margin-bottom:8px;
+padding-left:22px;
+position:relative;
+}
+
+.servicio-info li::before{
+content:"✓";
+color:#00CEE3;
+position:absolute;
+left:0;
+font-weight:bold;
+}
+
+.servicio-info h2::after{
+content:"";
+display:block;
+width:50px;
+height:3px;
+background:#00CEE3;
+margin-top:10px;
+margin-bottom:20px;
+}
+.servicio-card.reverse{
+flex-direction:row-reverse;
+}
+/* BOTON */
+
+.btn-cotizar{
+display:inline-block;
+background:var(--azul);
+color:white;
+padding:12px 26px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn-cotizar:hover{
+background:#00b8cc;
+}
+/* CTA SERVICIOS */
+
+.cta-servicios{
+background:#2E3A45;
+color:white;
+padding:110px 20px;
+text-align:center;
+width:100vw;
+margin-left:calc(-50vw + 50%);
+}
+
+.cta-servicios-content{
+max-width:700px;
+margin:auto;
+}
+
+.cta-servicios h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.cta-servicios p{
+font-size:18px;
+margin-bottom:35px;
+opacity:0.9;
+}
+
+.btn-cta-servicios{
+display:inline-block;
+background:#00CEE3;
+color:white;
+padding:14px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+font-size:16px;
+transition:0.3s;
+}
+
+.btn-cta-servicios:hover{
+background:#00b8cc;
+}
+.cta-servicios::before{
+content:"";
+display:block;
+width:70px;
+height:3px;
+background:#00CEE3;
+margin:0 auto 30px auto;
+}
+
 
 footer {
   text-align: center;
@@ -215,4 +327,19 @@ footer a.whatsapp {
     margin: 20px 0;
   }
 }
- 
+@media (max-width:900px){
+
+.servicio-card{
+flex-direction:column;
+text-align:center;
+}
+
+.servicio-card img{
+width:100%;
+}
+
+.servicio-info{
+text-align:left;
+}
+
+} 
