@@ -310,7 +310,7 @@ background:#2E3A45;
 color:white;
 padding:100px 20px;
 text-align:center;
-width:100vw;
+width:100%;
 margin-left:calc(-50vw + 50%);
 }
 
@@ -336,6 +336,7 @@ color:white;
 }
 
 .cta-btn{
+display:inline-block;
 background:#00CEE3;
 color:white;
 padding:14px 28px;
@@ -343,6 +344,8 @@ border-radius:30px;
 text-decoration:none;
 font-weight:600;
 transition:0.3s;
+max-width:100%;
+box-sizing:border-box;
 }
 
 .cta-btn:hover{
@@ -513,4 +516,22 @@ grid-template-columns:1fr;
 }
 
 }
+}
+@media (max-width:768px){
+
+.cta{
+padding:60px 20px;
+}
+
+.cta-container{
+padding:0 10px;
+}
+
+.cta-btn{
+width:100%;
+max-width:320px;
+margin:auto;
+display:block;
+}
+
 }
