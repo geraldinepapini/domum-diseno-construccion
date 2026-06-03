@@ -1,12 +1,16 @@
+/* ==========================================================================
+   1. ESTILOS BASE Y ESCRITORIO (Mantenemos tu diseño original intacto)
+   ========================================================================== */
+
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
 
 /* Reset general */
 body {
   margin: 0;
-  font-family:'Manrope',sans-serif;
-background:#F4F1EE;
-color:#2E3A45;
+  font-family: 'Manrope', sans-serif;
+  background: #F4F1EE;
+  color: #2E3A45;
 }
 
 /* Redes sociales arriba */
@@ -16,10 +20,10 @@ color:#2E3A45;
   text-align: right;
 }
 .redes-superiores a {
-margin-left:15px;
-color:#2E3A45;
-font-size:18px;
-display: inline-block;
+  margin-left: 15px;
+  color: #2E3A45;
+  font-size: 18px;
+  display: inline-block;
 }
 
 /* Header */
@@ -60,124 +64,105 @@ display: inline-block;
 }
 
 .main-nav a:hover {
-  color:#00CEE3;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .logo-img {
-    width: 120px;
-  }
-  .main-nav a {
-    display: inline-block;
-    margin: 10px 8px;
-    font-size: 14px;
-  }
+  color: #00CEE3;
 }
 
 /* HERO */
-
-.hero{
-position:relative;
-width:100%;
-height:520px;
-margin:0 0 80px 0;
-padding:0;
-overflow:hidden;
+.hero {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  margin: 0 0 80px 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.hero-img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
-
 
 /* overlay oscuro profesional */
-
-.hero::after{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.45);
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
 }
-
 
 /* contenido */
-
-.hero-overlay{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-color:white;
-max-width:700px;
-padding:20px;
-z-index:2;
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 20px;
+  z-index: 2;
 }
 
-
-.hero-overlay h1{
-font-size:44px;
-font-weight:600;
-margin-bottom:15px;
-line-height:1.2;
+.hero-overlay h1 {
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
-.hero-overlay p{
-font-size:18px;
-margin-bottom:30px;
-opacity:0.95;
+.hero-overlay p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.95;
 }
-
 
 /* botones */
-
-.hero-buttons{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.hero-buttons a{
-padding:14px 28px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-font-size:16px;
-transition:0.3s;
+.hero-buttons a {
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-.btn-primary{
-background:#00CEE3;
-color:white;
+.btn-primary {
+  background: #00CEE3;
+  color: white;
 }
 
-.btn-primary:hover{
-background:#00b8cc;
+.btn-primary:hover {
+  background: #00b8cc;
 }
 
-.btn-secondary{
-background:white;
-color:#2E3A45;
+.btn-secondary {
+  background: white;
+  color: #2E3A45;
 }
 
-.btn-secondary:hover{
-background:#eaeaea;
+.btn-secondary:hover {
+  background: #eaeaea;
 }
+
 /* Secciones */
 section:not(.hero) {
   margin: auto;
-  padding:90px 20px;
+  padding: 90px 20px;
   max-width: 1100px;
-  text-align:center;
-  border-top: 1px solid #D7DDE1; /* línea divisoria sutil para estructura */
+  text-align: center;
+  border-top: 1px solid #D7DDE1; 
 }
 
 section h2 {
@@ -187,185 +172,181 @@ section h2 {
   margin-bottom: 30px;
   color: #2E3A45;
 }
+
 /* SECCIÓN PROBLEMA */
-p{
-max-width:700px;
-margin-left:auto;
-margin-right:auto;
+p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.problema{
-background:#ECEBE9;
-padding:80px 20px;
-text-align:center;
-margin-top:100px;
+.problema {
+  background: #ECEBE9;
+  padding: 80px 20px;
+  text-align: center;
+  margin-top: 100px;
 }
 
-.problema-container{
-max-width:750px;
-margin:auto;
+.problema-container {
+  max-width: 750px;
+  margin: auto;
 }
 
-.problema h2{
-font-size:32px;
-margin-bottom:25px;
-color:#2E3A45;
-}
-.problema h2::after{
-content:"";
-display:block;
-width:60px;
-height:3px;
-background:#00CEE3;
-margin:15px auto 0 auto;
+.problema h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #2E3A45;
 }
 
-.problema-preguntas{
-margin-bottom:25px;
+.problema h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00CEE3;
+  margin: 15px auto 0 auto;
 }
 
-.problema-preguntas p{
-font-size:20px;
-margin:8px 0;
-color:#324049;
-font-weight:500;
+.problema-preguntas {
+  margin-bottom: 25px;
 }
 
-.problema-explicacion{
-font-size:17px;
-color:#5a646d;
-line-height:1.7;
-margin-top:20px;
+.problema-preguntas p {
+  font-size: 20px;
+  margin: 8px 0;
+  color: #324049;
+  font-weight: 500;
 }
+
+.problema-explicacion {
+  font-size: 17px;
+  color: #5a646d;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
 /* Servicios */
-.servicios{
-max-width:1100px;
-margin:auto;
-padding:60px 20px;
-text-align:center;
+.servicios {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.intro-servicios{
-max-width:600px;
-margin:10px auto 40px auto;
-color:#666;
+.intro-servicios {
+  max-width: 600px;
+  margin: 10px auto 40px auto;
+  color: #666;
 }
 
-.servicios-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:35px;
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
 }
 
-.servicio{
-background:white;
-border-radius:12px;
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
-overflow:hidden;
-display:flex;
-flex-direction:column;
-transition: all 0.3s ease;
+.servicio {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
 }
 
-
-.servicio img{
-width:100%;
-height:220px;
-object-fit:cover;
+.servicio img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
-.servicio-content{
-padding:22px;
-display:flex;
-flex-direction:column;
-flex-grow:1;
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+.servicio-content {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-
-
-.servicio-content p{
-flex-grow:1;
-font-size:14px;
-color:#555;
+.servicio-content p {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #555;
 }
 
-.servicio-decoshop{
-grid-column: span 2;
+.servicio-decoshop {
+  grid-column: span 2;
 }
 
-
-
-.btn-vermas{
-background:#00CEE3;
-color:white;
-padding:10px 20px;
-border-radius:20px;
-text-decoration:none;
-margin-top:15px;
-align-self:center;
+.btn-vermas {
+  background: #00CEE3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 15px;
+  align-self: center;
 }
-
-
 
 /* CTA */
-
-.cta{
-background:#2E3A45;
-color:white;
-padding:100px 20px;
-text-align:center;
-width:100%;
-margin-left:calc(-50vw + 50%);
+.cta {
+  background: #2E3A45;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  width: 100%;
+  margin-left: calc(-50vw + 50%);
 }
 
-.cta-container{
-max-width:800px;
-margin:auto;
-text-align:center;
-color:white;
+.cta-container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  color: white;
 }
 
-.cta h2{
-font-size:32px;
-margin-bottom:30px;
-opacity:0.9;
-color:white;
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  color: white;
 }
 
-.cta p{
-font-size:18px;
-margin-bottom:30px;
-opacity:0.9;
-color:white;
+.cta p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  color: white;
 }
 
-.cta-btn{
-display:inline-block;
-background:#00CEE3;
-color:white;
-padding:14px 28px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-max-width:100%;
-box-sizing:border-box;
+.cta-btn {
+  display: inline-block;
+  background: #00CEE3;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-.cta-btn:hover{
-background:#00b8cc;
+.cta-btn:hover {
+  background: #00b8cc;
 }
 
-.cta::before{
-content:"";
-display:block;
-width:60px;
-height:3px;
-background:#00CEE3;
-margin:0 auto 30px auto;
+.cta::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00CEE3;
+  margin: 0 auto 30px auto;
 }
+
 /* Misión y Visión */
 .vision-mision {
   display: flex;
@@ -463,81 +444,201 @@ footer a {
   margin: 0 8px;
   display: inline-block;
 }
-/* WHATSAPP */
 
-.whatsapp-float{
-position:fixed;
-bottom:40px;
-right:40px;
-background:#25D366;
-color:white;
-font-size:40px;
-padding:30px;
-border-radius:50%;
-z-index:999;
-}
-
-/* Responsive ajustes */
-@media (max-width: 768px) {
-  .hero-img{
-height:350px;
-}
-
-.hero-overlay h1{
-font-size:28px;
-}
-
-.hero-overlay p{
-font-size:16px;
-}
-
-.main-nav a{
-display:inline-block;
-margin:8px;
-font-size:14px;
-}
-
-nav ul {
-  flex-direction: column;
+/* WHATSAPP BASE */
+.whatsapp-float {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #25D366;
+  color: white;
+  font-size: 40px;
+  padding: 20px; /* Reducido un toque para que en desktop no sea gigante tampoco */
+  border-radius: 50%;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  display: flex;
   align-items: center;
-}
-.vision-mision {
-  flex-direction: column;
-  align-items: center;
-}
-.equipo {
-  flex-direction: column;
-  align-items: center;
-}
-.servicios {
-  gap: 30px;
-}
-.banner-ebook h3 {
-  font-size: 20px;
-}
-@media (max-width:768px){
-
-.servicios-grid{
-grid-template-columns:1fr;
+  justify-content: center;
+  text-decoration: none;
 }
 
-}
-}
-@media (max-width:768px){
 
-.cta{
-padding:60px 20px;
-}
+/* ==========================================================================
+   2. 📱 RESPONSIVE SELECTION (Arreglos específicos para celulares)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  
+  /* Bloquea desbordes rebeldes de pantalla */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
 
-.cta-container{
-padding:0 10px;
-}
+  /* Redes superiores alineadas */
+  .redes-superiores {
+    text-align: center;
+    padding: 8px 10px;
+  }
 
-.cta-btn{
-width:100%;
-max-width:320px;
-margin:auto;
-display:block;
-}
+  /* Navegación colapsada prolija */
+  .logo-img {
+    width: 130px;
+  }
+  
+  .main-nav {
+    padding: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
 
+  .main-nav a {
+    margin: 4px 6px;
+    font-size: 13px;
+  }
+
+  /* Hero Mobile Centrado y Proporcionado */
+  .hero {
+    height: 420px;
+    margin-bottom: 40px;
+  }
+  
+  .hero-img {
+    height: 420px;
+  }
+  
+  .hero-overlay {
+    width: 85%;
+    padding: 0;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 26px; /* Letra equilibrada para cel */
+    line-height: 1.3;
+  }
+  
+  .hero-overlay p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column; /* Botones uno abajo del otro en el cel */
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .hero-buttons a {
+    width: 100%;
+    max-width: 260px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+
+  /* Secciones Estructura General */
+  section:not(.hero) {
+    padding: 50px 15px;
+  }
+  
+  section h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+  }
+
+  /* Secciones Problema (Las dos iguales) */
+  .problema {
+    padding: 50px 15px;
+    margin-top: 40px;
+  }
+  
+  .problema h2 {
+    font-size: 23px;
+  }
+  
+  .problema-preguntas p {
+    font-size: 16px; /* No más letras gigantes desproporcionadas */
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+  
+  .problema-explicacion {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* Grilla de Servicios (¡Solución al amontonamiento!) */
+  .servicios-grid {
+    grid-template-columns: 1fr; /* Todo a una sola columna directa */
+    gap: 25px;
+  }
+  
+  .servicio-decoshop {
+    grid-column: auto; /* Anula el span 2 del escritorio */
+  }
+
+  .servicio img {
+    height: 190px; /* Fotos levemente más chicas y estéticas */
+  }
+
+  /* Call To Action */
+  .cta {
+    padding: 60px 15px;
+    margin-left: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .cta h2 {
+    font-size: 24px;
+  }
+  
+  .cta p {
+    font-size: 16px;
+  }
+  
+  .cta-btn {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* Misión y Visión (¡Solución al texto que se salía!) */
+  .vision-mision {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+  
+  .vision-mision .card {
+    flex: 1 1 100%; /* Deja de medir 400px rígidos y se adapta al ancho del cel */
+    max-width: 100%;
+  }
+
+  /* Nuestro Equipo */
+  .equipo {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .equipo .miembro {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Botón Flotante de WhatsApp Adaptado */
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    font-size: 22px;
+    padding: 12px;
+    width: 25px;
+    height: 25px;
+  }
 }

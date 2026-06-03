@@ -1,336 +1,466 @@
+/* ==========================================================================
+   1. ESTILOS BASE Y ESCRITORIO
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
 
-body{
-margin:0;
-font-family:'Manrope',sans-serif;
-background:#F4F1EE;
-color:#2E3A45;
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  background: #F4F1EE;
+  color: #2E3A45;
+  line-height: 1.6;
 }
 
 /* REDES */
-
-.redes-superiores{
-background:#FAFAF8;
-padding:8px 20px;
-text-align:right;
+.redes-superiores {
+  background: #FAFAF8;
+  padding: 8px 20px;
+  text-align: right;
 }
 
-.redes-superiores a{
-margin-left:15px;
-color:#2E3A45;
-font-size:18px;
+.redes-superiores a {
+  margin-left: 15px;
+  color: #2E3A45;
+  font-size: 18px;
+  display: inline-block;
 }
 
 /* HEADER */
-
-.main-header{
-display:flex;
-flex-direction:column;
-align-items:center;
-background:#FAFAF8;
-padding:10px 0;
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAF8;
+  padding: 10px 0;
 }
 
-.logo-container{
-margin-bottom:10px;
+.logo-container {
+  margin-bottom: 10px;
 }
 
-.logo-img{
-width:180px;
-max-width:100%;
+.logo-img {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
 }
 
-.main-nav{
-background:#324049;
-width:100%;
-text-align:center;
-padding:10px 0;
+.main-nav {
+  background: #324049;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
 }
 
-.main-nav a{
-color:#FAFAF8;
-margin:0 15px;
-text-decoration:none;
-font-weight:600;
+.main-nav a {
+  color: #FAFAF8;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.main-nav a:hover{
-color:#00CEE3;
+.main-nav a:hover {
+  color: #00CEE3;
 }
 
-/* HERO */
-
-.hero-tienda{
-position:relative;
-height:75vh;
-overflow:hidden;
+/* HERO TIENDA */
+.hero-tienda {
+  position: relative;
+  height: 75vh;
+  overflow: hidden;
 }
 
-.hero-img{
-width:100%;
-height:100%;
-object-fit:cover;
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.hero-tienda::after{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.35);
+.hero-tienda::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
 }
 
-.hero-overlay{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-color:white;
-z-index:2;
-max-width:700px;
-padding:20px;
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.hero-overlay h1{
-font-size:54px;
-margin-bottom:20px;
+.hero-overlay h1 {
+  font-size: 54px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-.hero-overlay p{
-font-size:20px;
-line-height:1.7;
-margin-bottom:35px;
+.hero-overlay p {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 35px;
 }
 
-.btn-primary{
-display:inline-block;
-background:#00CEE3;
-color:white;
-padding:14px 30px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
+.btn-primary {
+  display: inline-block;
+  background:#00CEE3;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-.btn-primary:hover{
-background:#00b8cc;
+.btn-primary:hover {
+  background: #00b8cc;
 }
 
 /* INTRO */
-
-.intro-home{
-max-width:850px;
-margin:auto;
-padding:100px 20px;
-text-align:center;
+.intro-home {
+  max-width: 850px;
+  margin: auto;
+  padding: 100px 20px;
+  text-align: center;
 }
 
-.intro-home h2{
-font-size:34px;
-margin-bottom:25px;
+.intro-home h2 {
+  font-size: 34px;
+  margin-bottom: 25px;
+  color: #2E3A45;
 }
 
-.intro-home p{
-line-height:1.9;
-color:#5A646D;
-font-size:17px;
+.intro-home p {
+  line-height: 1.9;
+  color: #5A646D;
+  font-size: 17px;
+  margin: 0 auto;
 }
 
 /* COLECCIÓN */
-
-.coleccion{
-padding:40px 20px 100px;
-max-width:1200px;
-margin:auto;
+.coleccion {
+  padding: 40px 20px 100px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.coleccion h2{
-text-align:center;
-font-size:34px;
-margin-bottom:60px;
+.coleccion h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 60px;
+  color: #2E3A45;
 }
 
-.productos-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:40px;
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
 }
 
-.producto-card{
-background:#FAFAF8;
-border-radius:14px;
-overflow:hidden;
-transition:0.3s;
+.producto-card {
+  background: #FAFAF8;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.producto-card:hover{
-transform:translateY(-6px);
+.producto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.producto-img img{
-width:100%;
-height:420px;
-object-fit:cover;
-display:block;
+.producto-img img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
 }
 
-.producto-info{
-padding:30px;
+.producto-info {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.categoria{
-display:inline-block;
-font-size:13px;
-letter-spacing:1px;
-text-transform:uppercase;
-color:#00CEE3;
-margin-bottom:15px;
-font-weight:600;
+.categoria {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #00CEE3;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-.producto-info h3{
-font-size:24px;
-margin-bottom:15px;
+.producto-info h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #2E3A45;
 }
 
-.producto-info p{
-color:#5A646D;
-line-height:1.7;
-margin-bottom:25px;
+.producto-info p {
+  color: #5A646D;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  flex-grow: 1; /* Hace que los textos cortos se alineen parejos */
 }
 
-.btn-comprar{
-display:inline-block;
-padding:12px 24px;
-border-radius:30px;
-background:#324049;
-color:white;
-text-decoration:none;
-transition:0.3s;
+.btn-comprar {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: #324049;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 600;
+  text-align: center;
+  align-self: flex-start;
+  width: 100%; /* Botón de ancho completo en la tarjeta queda más prolijo */
+  max-width: 180px;
 }
 
-.btn-comprar:hover{
-background:#00CEE3;
+.btn-comprar:hover {
+  background: #00CEE3;
 }
 
-/* BLOQUE */
-
-.bloque-home{
-background:#ECEBE9;
-padding:100px 20px;
-margin-top:60px;
+/* BLOQUE EMOCIONAL */
+.bloque-home {
+  background: #ECEBE9;
+  padding: 100px 20px;
+  margin-top: 60px;
 }
 
-.bloque-home-content{
-max-width:800px;
-margin:auto;
-text-align:center;
+.bloque-home-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
 }
 
-.bloque-home h2{
-font-size:34px;
-margin-bottom:25px;
+.bloque-home h2 {
+  font-size: 34px;
+  margin-bottom: 25px;
+  color: #2E3A45;
 }
 
-.bloque-home p{
-font-size:17px;
-line-height:1.9;
-color:#5A646D;
+.bloque-home p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #5A646D;
 }
 
 /* CTA */
-
-.cta-home{
-background:#324049;
-padding:100px 20px;
-text-align:center;
-color:white;
+.cta-home {
+  background: #324049;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
 }
 
-.cta-home h2{
-font-size:36px;
-margin-bottom:20px;
+.cta-home h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-.cta-home p{
-max-width:650px;
-margin:auto auto 35px;
-line-height:1.8;
+.cta-home p {
+  max-width: 650px;
+  margin: 0 auto 35px auto;
+  line-height: 1.8;
+  opacity: 0.9;
 }
 
-.cta-btn{
-display:inline-block;
-background:#00CEE3;
-color:white;
-padding:14px 30px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
+.cta-btn {
+  display: inline-block;
+  background: #00CEE3;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-.cta-btn:hover{
-background:#00b8cc;
+.cta-btn:hover {
+  background: #00b8cc;
 }
 
 /* FOOTER */
-
-footer{
-background:#324049;
-color:#FAFAF8;
-text-align:center;
-padding:30px;
+footer {
+  background: #324049;
+  color: #FAFAF8;
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-footer p{
-margin:5px 0;
+footer p {
+  margin: 5px 0;
 }
 
-footer a{
-margin:0 8px;
+footer a {
+  margin: 0 8px;
+  display: inline-block;
 }
 
-/* WHATSAPP */
-
-.whatsapp-float{
-position:fixed;
-bottom:40px;
-right:40px;
-background:#25D366;
-color:white;
-font-size:34px;
-padding:22px;
-border-radius:50%;
-z-index:999;
+/* WHATSAPP FLOTANTE */
+.whatsapp-float {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #25D366;
+  color: white;
+  font-size: 40px;
+  padding: 20px;
+  border-radius: 50%;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
-/* RESPONSIVE */
 
-@media(max-width:768px){
+/* ==========================================================================
+   2. 📱 RESPONSIVE SELECTION (Ajustes Mobile y tipografías grandes)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
 
-.hero-overlay h1{
-font-size:38px;
-}
+  /* Redes superiores */
+  .redes-superiores {
+    text-align: center;
+    padding: 8px 10px;
+  }
 
-.hero-overlay p{
-font-size:17px;
-}
+  /* Header y Menú adaptados */
+  .logo-img {
+    width: 130px;
+  }
 
-.main-nav a{
-display:inline-block;
-margin:8px;
-font-size:14px;
-}
+  .main-nav {
+    padding: 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
 
-.producto-img img{
-height:340px;
-}
+  .main-nav a {
+    display: inline-block;
+    margin: 4px 8px;
+    font-size: 13px;
+  }
 
-.intro-home,
-.bloque-home,
-.cta-home{
-padding:70px 20px;
-}
+  /* Reducción controlada del Hero */
+  .hero-tienda {
+    height: 60vh; /* Un toque más bajo para que no tape todo el cel */
+  }
 
+  .hero-overlay {
+    width: 90%;
+  }
+
+  .hero-overlay h1 {
+    font-size: 32px; /* Letra imponente pero equilibrada */
+    margin-bottom: 15px;
+  }
+
+  .hero-overlay p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+
+  /* SOLUCIÓN TIPOGRAFÍAS GIGANTES DE SECCIONES */
+  .intro-home,
+  .bloque-home,
+  .cta-home {
+    padding: 55px 15px;
+  }
+
+  .intro-home h2,
+  .coleccion h2,
+  .bloque-home h2 {
+    font-size: 24px; /* Bajados de 34px a un tamaño súper legible */
+    margin-bottom: 20px;
+  }
+
+  .intro-home p,
+  .bloque-home p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* Ajuste Catálogo Colecciones */
+  .coleccion {
+    padding: 30px 15px 60px;
+  }
+
+  .productos-grid {
+    grid-template-columns: 1fr; /* Una sola fila directa de tarjetas */
+    gap: 30px;
+  }
+
+  .producto-img img {
+    height: 280px; /* Evita que las fotos queden excesivamente largas en vertical */
+  }
+
+  .producto-info {
+    padding: 20px;
+  }
+
+  .producto-info h3 {
+    font-size: 20px;
+  }
+
+  .producto-info p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .btn-comprar {
+    align-self: center;       /* Rompe la alineación izquierda de escritorio y lo centra */
+    width: 100%;              /* Le permite estirarse */
+    max-width: 240px;         /* Pero le pone un límite para que quede como un botón estético */
+    text-align: center;       /* Asegura el texto centrado adentro */
+    padding: 12px 20px;       /* Un ajuste de aire para que toque bien el dedo */
+  }
+
+  /* Call To Action inferior */
+  .cta-home h2 {
+    font-size: 24px;
+  }
+
+  .cta-home p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  /* Botón de WhatsApp flotante móvil */
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    font-size: 22px;
+    padding: 12px;
+    width: 25px;
+    height: 25px;
+  }
 }
