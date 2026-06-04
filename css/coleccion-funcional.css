@@ -1,0 +1,455 @@
+/* ==========================================================================
+   1. VARIABLES Y ESTILOS BASE (Escritorio)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
+:root {
+  --azul: #00CEE3;
+  --gris: #324049; /* Sincronizado con el color oscuro del menú */
+  --blanco: #ffffff;
+  --fondo: #F4F1EE;
+  --texto-oscuro: #2E3A45;
+  --texto-mutado: #5A646D;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  background: var(--fondo);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+}
+
+/* REDES SUPERIORES */
+.redes-superiores {
+  background-color: #FAFAF8;
+  padding: 8px 20px;
+  text-align: right;
+}
+
+.redes-superiores a {
+  margin-left: 15px;
+  color: var(--texto-oscuro);
+  font-size: 18px;
+  display: inline-block;
+}
+
+/* HEADER Y NAV */
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #FAFAF8;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo-img {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+}
+
+.main-nav {
+  background-color: var(--gris);
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.main-nav a {
+  color: #FAFAF8;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: var(--azul);
+}
+
+/* HERO PORTFOLIO */
+.hero-portfolio {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 480px;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Capa de contraste para lectura perfecta */
+.hero-portfolio::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-portfolio-contenido {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 750px;
+  padding: 20px;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.hero-portfolio h1 {
+  font-size: 46px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero-portfolio p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* SECCIÓN INTRO */
+.intro {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.intro h2 { /* Corregido de h1 a h2 para morder el HTML real */
+  font-size: 34px;
+  margin-bottom: 20px;
+  color: var(--texto-oscuro);
+}
+
+.intro p {
+  color: var(--texto-mutated, #5A646D);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* ESTRUCTURA DE PRODUCTOS (PROYECTOS) */
+.proyecto {
+  padding: 80px 20px;
+  background: transparent;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.proyecto-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  align-items: stretch;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.proyecto.reverse .proyecto-container {
+  flex-direction: row-reverse;
+}
+
+/* GALERÍA DE IMÁGENES */
+.proyecto-galeria {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.proyecto-galeria > img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.miniaturas {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.miniaturas img {
+  width: 85px;
+  height: 65px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.6;
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+.miniaturas img:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/* BLOQUE DE INFORMACIÓN */
+.proyecto-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.proyecto-info h2 {
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--texto-oscuro);
+}
+
+.proyecto-resumen {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: var(--texto-mutated, #5A646D);
+}
+
+.proyecto-detalles {
+  background: #F8F9FA;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border-left: 3px solid var(--azul);
+}
+
+.proyecto-detalles p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.proyecto-info h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--texto-oscuro);
+}
+
+.proyecto-info h3 + p {
+  font-size: 15px;
+  color: var(--texto-mutated, #5A646D);
+  margin-bottom: 20px;
+}
+
+/* CAJA DE COMPRA WHATSAPP */
+.info-compra-whatsapp {
+  margin-top: 15px;
+  padding-top: 20px;
+  border-top: 1px solid #EEE;
+}
+
+/* Ajustes a los elementos inline del HTML para controlarlos */
+.info-compra-whatsapp a {
+  transition: 0.3s !important;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+}
+
+.info-compra-whatsapp a:hover {
+  background-color: #20ba5a !important;
+  transform: translateY(-2px);
+}
+
+/* ANIMACIÓN INTERSECTION OBSERVER */
+.proyecto.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.colores-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.circulo-textura {
+  width: 45px;         /* Un poquito más grande para que se aprecie el tramado de la tela */
+  height: 45px;
+  border-radius: 50%;  /* Esto lo transforma en un círculo perfecto */
+  object-fit: cover;   /* Mantiene la proporción de la foto sin deformar */
+  cursor: pointer;
+  border: 2px solid #EAECEF;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Efecto al pasar el mouse por arriba */
+.circulo-textura:hover {
+  border-color: var(--azul); /* Se ilumina con tu color de marca */
+  transform: scale(1.1);     /* Crece un poquito */
+}
+/* FOOTER */
+footer {
+  background: var(--gris);
+  color: #FAFAF8;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  display: inline-block;
+  margin: 5px;
+}
+
+footer img {
+  width: 45px;
+  transition: 0.3s;
+}
+
+footer img:hover {
+  transform: scale(1.08);
+}
+
+
+/* ==========================================================================
+   2. 📱 RESPONSIVE DESIGN (Ajustes para celulares y tablets)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  
+  /* Reset scroll horizontal molesto */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Header y Menú */
+  .logo-img {
+    width: 130px;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 0;
+  }
+
+  .main-nav a {
+    margin: 4px 8px;
+    font-size: 13px;
+  }
+
+  /* Hero */
+  .hero-portfolio {
+    height: 50vh;
+    margin-bottom: 30px;
+  }
+
+  .hero-portfolio-contenido {
+    width: 90%;
+  }
+
+  .hero-portfolio h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .hero-portfolio p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* Secciones de texto */
+  .intro {
+    padding: 40px 15px 20px;
+  }
+
+  .intro h2 {
+    font-size: 24px;
+  }
+
+  .intro p {
+    font-size: 15px;
+  }
+
+  /* Tarjetas de producto */
+  .proyecto {
+    padding: 20px 10px;
+    margin-bottom: 10px;
+  }
+
+  .proyecto-container {
+    flex-direction: column !important; /* Forza vertical en común y reverse */
+    padding: 20px 15px;
+    gap: 25px;
+  }
+
+  .proyecto-galeria > img {
+    height: 280px; /* Evita fotos infinitas en vertical */
+  }
+
+  /* Magia para las miniaturas: carrusel deslizable con el dedo */
+  .miniaturas {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .miniaturas img {
+    width: 75px;
+    height: 55px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    opacity: 0.8; /* Más visibles en mobile por usabilidad */
+  }
+
+  /* Textos de producto */
+  .proyecto-info h2 {
+    font-size: 21px;
+  }
+
+  .proyecto-resumen {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  /* Botón de compra WhatsApp adaptado a mobile */
+  .info-compra-whatsapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-compra-whatsapp a {
+    display: block !important;
+    width: 100%;
+    max-width: 260px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 15px !important;
+  }
+}
