@@ -1,25 +1,38 @@
 export default async function handler(req, res) {
+    // Permitir llamadas CORS desde Snipcart
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Método no permitido' });
     }
 
-    const { content } = req.body;
-
     try {
-        // Creamos la preferencia de pago en Mercado Pago
-        const response = await fetch('https://api.mercadopago.com/checkout/preferences', {
+        const body = req.body;
+        // Snipcart envía los ítems dentro de invoice o content
+        const items = body.content?.items || body.items || [];
+
+        const mpItems = items.map(item => ({
+            title: item.name,
+            unit_price: Number(item.price),
+            quantity: Number(item.quantity),
+            currency_id: 'ARS'
+        }));
+
+        // Crear la preferencia en Mercado Pago
+        const mpResponse = await fetch('https://api.mercadopago.com/checkout/preferences', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${process.env.MP_ACCESS_TOKEN}`,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                items: content.items.map(item => ({
-                    title: item.name,
-                    unit_price: item.price,
-                    quantity: item.quantity,
-                    currency_id: 'ARS'
-                })),
+                items: mpItems,
                 back_urls: {
                     success: `https://${req.headers.host}/`,
                     failure: `https://${req.headers.host}/`,
@@ -29,14 +42,19 @@ export default async function handler(req, res) {
             })
         });
 
-        const data = await response.json();
+        const mpData = await mpResponse.json();
 
-        // Devolvemos la URL a la que Snipcart debe redirigir al usuario
+        if (!mpResponse.ok) {
+            console.error('Error MP:', mpData);
+            return res.status(500).json({ error: 'Error al comunicarse con Mercado Pago' });
+        }
+
+        // Devolver el formato esperado por Snipcart para redirección
         return res.status(200).json({
-            redirectUrl: data.init_point
+            redirectUrl: mpData.init_point
         });
     } catch (error) {
-        console.error('Error al crear preferencia de Mercado Pago:', error);
+        console.error('Error interno:', error);
         return res.status(500).json({ error: error.message });
     }
 }
