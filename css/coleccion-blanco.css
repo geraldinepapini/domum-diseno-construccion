@@ -431,3 +431,33 @@ footer img:hover {
     margin-top: 15px !important;
   }
 }
+/* Ajuste de escala y fuente para Snipcart */
+.snipcart-layout {
+    font-family: inherit;
+}
+
+/* Ajusta el tamaño base de la tipografía del modal de Snipcart */
+#snipcart {
+    font-size: 16px;
+}
+/* Botón principal de Añadir al Carrito - Domum Design */
+.snipcart-add-item {
+    background-color: #00CEE3 !important;  /* Tu cyan distintivo */
+    color: #1C1C1C !important;             /* Texto Charcoal para máximo contraste */
+    border: none !important;
+    font-size: 1rem !important;            /* Tamaño legible */
+    padding: 12px 20px !important;         /* Botón más amplio y cómodo */
+    font-weight: 700 !important;           /* Texto resaltado */
+    letter-spacing: 1px !important;        /* Estilo tipográfico elegante */
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;                           /* Se adapta al ancho de la tarjeta */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.snipcart-add-item:hover {
+    background-color: #00b3c5 !important;  /* Un cyan un tono más profundo al interactuar */
+    transform: translateY(-2px);           /* Pequeño levante táctil */
+}
