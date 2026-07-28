@@ -8,6 +8,22 @@
   <meta name="description" content="Redistribución inteligente de casas y locales. Mejorá funcionalidad, estética y bienestar en tu espacio.">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- 1. El estilo visual del carrito -->
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css" />
+
+<!-- 2. La configuración del motor de Snipcart con tu Clave Pública y Pesos Argentinos -->
+<script>
+    window.SnipcartSettings = {
+        publicApiKey: "ZDA2NWUxNDgtNWJiZC00YTgwLWExZGItMjllMGM2NGM0YzBmNjM5MjA3NDg0MjA4ODkwMzQ1",
+        loadStrategy: "on-user-interaction",
+        modalTemplateUrl: "/snipcart-templates.html",
+        currency: "ars" // <-- Esto obliga a tu web a trabajar en Pesos Argentinos
+    };
+</script>
+
+<!-- 3. El script que activa el funcionamiento -->
+<script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script>
+</div>
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-20WV5JVYPC"></script>

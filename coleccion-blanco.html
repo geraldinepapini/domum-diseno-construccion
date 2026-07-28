@@ -8,9 +8,22 @@
 <title>Coleccion Blanco Elegante | Domum Design Deco</title>
 <link rel="icon" type="image/png" href="GENERALES/flavicondomum.png">
 <link rel="stylesheet" href="css/coleccion-blanco.css">
+<!-- 1. El estilo visual del carrito -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css" />
+
+<!-- 2. La configuración del motor de Snipcart con tu Clave Pública y Pesos Argentinos -->
+<script>
+    window.SnipcartSettings = {
+        publicApiKey: "ZDA2NWUxNDgtNWJiZC00YTgwLWExZGItMjllMGM2NGM0YzBmNjM5MjA3NDg0MjA4ODkwMzQ1",
+        loadStrategy: "on-user-interaction",
+        modalTemplateUrl: "/snipcart-templates.html",
+        currency: "ars" // <-- Esto obliga a tu web a trabajar en Pesos Argentinos
+    };
+</script>
+
+<!-- 3. El script que activa el funcionamiento -->
 <script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script>
-<div id="snipcart" data-api-key="ZDA2NWUxNDgtNWJiZC00YTgwLWExZGItMjllMGM2NGM0YzBmNjM5MjA3NDg0MjA4ODkwMzQ1" hidden></div>
+</div>
 </head>
 
 
